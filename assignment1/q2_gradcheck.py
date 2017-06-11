@@ -7,7 +7,7 @@ def gradcheck_naive(f, x):
     Gradient check for a function f 
     - f should be a function that takes a single argument and outputs the cost and its gradients
     - x is the point (numpy array) to check the gradient at
-    """ 
+    """
 
     rndstate = random.getstate()
     random.setstate(rndstate)  
@@ -23,7 +23,8 @@ def gradcheck_naive(f, x):
         ### make sure you call random.setstate(rndstate) before calling f(x) each time, this will make it 
         ### possible to test cost functions with built in randomness later
         ### YOUR CODE HERE:
-        raise NotImplementedError
+
+        #raise NotImplementedError
         ### END YOUR CODE
 
         # Compare gradients

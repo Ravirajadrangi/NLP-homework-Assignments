@@ -37,12 +37,14 @@ def softmax(x):
         for i in range(len(max_list)):
             x[i] -= max_list[i]
         e = np.exp(x)
+        #print(e)
         total = np.sum(np.exp(x), axis=1)
-        p = np.arange(10)
+        p = np.zeros(np.shape(e))
         # divide each vector example by the sum of that example
         for i in range(len(e)):
-            p = e[i] / total[i]
-        print('soft', p)
+            p[i] = e[i] / total[i]
+
+        #print('soft', p)
 
         #p = np.exp(x) / np.sum(np.exp(x), axis=1)
 
